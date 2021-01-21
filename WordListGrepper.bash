@@ -20,8 +20,8 @@ cat $ListFile |
 while read word
 do
     if [ -n "$word" ] ; then
-        echo $word
-        echo '*******'
+        # grep実行し、結果出力
+        grep -rn --color=auto $word
     fi
 done < $ListFile
 
