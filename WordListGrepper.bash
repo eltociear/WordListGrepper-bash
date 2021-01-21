@@ -6,6 +6,7 @@ echo "Hello! Today is beautiful day."
 # 対象ディレクトリ取得
 echo "input target directory:"
 read tmpDir
+targetDir="../$tmpDir/"
 # TODO:ディレクトリ存在確認
 
 # リストを読み込む
@@ -21,7 +22,7 @@ while read word
 do
     if [ -n "$word" ] ; then
         # grep実行し、結果出力
-        grep -rn --color=auto $word
+        grep -rn --color=auto $word $targetDir
     fi
 done < $ListFile
 
