@@ -1,6 +1,12 @@
 #!/bin/bash
 
+# ******************** main処理 ********************
 echo "Hello! Today is beautiful day."
+
+# 対象ディレクトリ取得
+echo "input target directory:"
+read tmpDir
+# TODO:ディレクトリ存在確認
 
 # リストを読み込む
 ListFile="./TargetList.txt"
