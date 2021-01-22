@@ -22,7 +22,7 @@ while read word
 do
     if [ -n "$word" ] ; then
         # grep実行し、結果出力
-        grep -rn --color=auto $word $targetDir
+        grep -rn --color=auto " $word " $targetDir
     fi
 done < $ListFile
 
