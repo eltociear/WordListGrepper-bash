@@ -7,7 +7,11 @@ echo "Hello! Today is beautiful day."
 echo "input target directory:"
 read tmpDir
 targetDir="../$tmpDir/"
-# TODO:ディレクトリ存在確認
+# ディレクトリの存在確認
+if [ ! -e $targetDir ] ; then
+    echo 'Input directory does not exist!'
+    exit 1
+fi
 
 # リストを読み込む
 ListFile="./TargetList.txt"
