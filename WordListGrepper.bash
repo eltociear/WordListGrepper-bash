@@ -26,6 +26,7 @@ while read word
 do
     if [ -n "$word" ] ; then
         # grep実行し、結果出力
+        # TODO: デフォルトは大文字小文字無視するが、オプションを引数で指定できるようにしたい
         grep -rni --color=auto " $word " $targetDir
     fi
 done < $ListFile
